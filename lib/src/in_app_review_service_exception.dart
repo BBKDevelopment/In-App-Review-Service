@@ -1,3 +1,7 @@
+// Copyright 2024 BBK Development. All rights reserved.
+// Use of this source code is governed by a Apache-2.0-style license that can be
+// found in the LICENSE file.
+
 part of 'in_app_review_service.dart';
 
 /// {@template in_app_review_service_exception}

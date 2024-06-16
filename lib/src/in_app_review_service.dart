@@ -1,5 +1,10 @@
+// Copyright 2024 BBK Development. All rights reserved.
+// Use of this source code is governed by a Apache-2.0-style license that can be
+// found in the LICENSE file.
+
 import 'dart:developer';
 
+import 'package:flutter/material.dart';
 import 'package:in_app_review/in_app_review.dart';
 
 part 'in_app_review_service_exception.dart';
@@ -14,6 +19,13 @@ part 'in_app_review_service_exception.dart';
 class InAppReviewService {
   /// {@macro in_app_review_service}
   InAppReviewService() : _inAppReview = InAppReview.instance;
+
+  /// Constructor used for testing.
+  ///
+  /// Do not use this constructor in production code.
+  @visibleForTesting
+  InAppReviewService.test({required InAppReview inAppReview})
+      : _inAppReview = inAppReview;
 
   /// Request a review
   final InAppReview _inAppReview;
@@ -72,13 +84,13 @@ class InAppReviewService {
   /// [appStoreId] is required for iOS & MacOS.
   ///
   /// [microsoftStoreId] is required for Windows.
-  Future<void> openStoreListing(
+  Future<void> openStoreListing({
     /// Required for iOS & MacOS.
     String? appStoreId,
 
     /// Required for Windows.
     String? microsoftStoreId,
-  ) async {
+  }) async {
     try {
       await _inAppReview.openStoreListing();
     } catch (error, stackTrace) {

@@ -20,7 +20,7 @@ Add `in_app_review_service` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  wakelock_service:
+  in_app_review_service:
     git:
       url: https://github.com/BBKDevelopment/In-App-Review-Service.git
       ref: v1.0.0

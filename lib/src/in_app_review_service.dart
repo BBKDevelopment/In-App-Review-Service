@@ -56,6 +56,8 @@ class InAppReviewService {
   /// Attempts to show the review dialog. It's recommended to first check if the
   /// device supports this feature via [isAvailable].
   ///
+  /// Throws a [RequestReviewException] if the review dialog could not be shown.
+  ///
   /// To improve the users experience, iOS and Android enforce limitations that
   /// might prevent this from working after a few tries. iOS & MacOS users can
   /// also disable this feature entirely in the App Store settings.
@@ -84,6 +86,9 @@ class InAppReviewService {
   /// [appStoreId] is required for iOS & MacOS.
   ///
   /// [microsoftStoreId] is required for Windows.
+  ///
+  /// Throws an [OpenStoreListingException] if the store listing could not be
+  /// opened.
   Future<void> openStoreListing({
     /// Required for iOS & MacOS.
     String? appStoreId,

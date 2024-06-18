@@ -1,6 +1,6 @@
 name: in_app_review_service
 description: In App Review Service
-version: 1.0.0
+version: 1.0.1
 publish_to: none
 
 environment:

@@ -1,19 +1,35 @@
-# In App Review Service
+# <p align="center">In App Review Service</p>
 
+<div align="center">
+
+[![in_app_review_service][build_status_badge]][workflow_link]
+![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
 
-In App Review Service
+</div>
+
+This service wraps the [in_app_review][in_app_review_link] and provides secure usage of the plugin by handling exceptions.
 
 ## Installation 💻
 
 **❗ In order to start using In App Review Service you must have the [Flutter SDK][flutter_install_link] installed on your machine.**
 
-Install via `flutter pub add`:
+Add `in_app_review_service` to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  wakelock_service:
+    git:
+      url: https://github.com/BBKDevelopment/In-App-Review-Service.git
+      ref: v1.0.0
+```
+
+Install it:
 
 ```sh
-dart pub add in_app_review_service
+flutter packages get
 ```
 
 ---
@@ -50,6 +66,10 @@ genhtml coverage/lcov.info -o coverage/
 open coverage/index.html
 ```
 
+[in_app_review_link]: https://github.com/britannio/in_app_review
+[workflow_link]: https://github.com/BBKDevelopment/In-App-Review-Service/actions/workflows/main.yaml
+[build_status_badge]: https://github.com/BBKDevelopment/In-App-Review-Service/actions/workflows/main.yaml/badge.svg
+[coverage_badge]: coverage_badge.svg
 [flutter_install_link]: https://docs.flutter.dev/get-started/install
 [github_actions_link]: https://docs.github.com/en/actions/learn-github-actions
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
